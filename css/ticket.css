@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Body text Regular */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+.ticket-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+.ticket-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 20px;
+}
+.ticket-header h1 {
+    color: #667eea;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Section Headings use Bold */
+}
+.ticket-number {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.ticket-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.ticket-details h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Section Headings use Bold */
+}
+.detail-item {
+    margin-bottom: 15px;
+}
+.detail-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* SemiBold for labels */
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+.detail-value {
+    color: #333;
+    font-size: 1.1em;
+}
+.detail-value.highlight {
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.status-paid {
+    background: #d4edda;
+    color: #155724;
+}
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+.status-not-yet {
+    background: #f8d7da;
+    color: #721c24;
+}
+.status-refunded {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+.detail-alert {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+.detail-alert-info {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+.qr-section {
+    text-align: center;
+}
+.qr-code {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+.qr-code img,
+.qr-code-img {
+    max-width: 200px;
+    height: auto;
+}
+.qr-code-text {
+    color: #666;
+    font-size: 0.9em;
+}
+.qr-code-code {
+    color: #999;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.btn-home {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Buttons use Bold */
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ticket-container {
+        padding: 20px;
+    }
+    
+    .ticket-header h1 {
+        font-size: 1.5em;
+        font-weight: 700; /* Maintain Bold */
+    }
+    
+    .ticket-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .ticket-details h2 {
+        font-size: 1.3em;
+        font-weight: 700; /* Maintain Bold */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .ticket-container {
+        padding: 15px;
+    }
+    
+    .ticket-header h1 {
+        font-size: 1.3em;
+        font-weight: 700; /* Maintain Bold */
+    }
+    
+    .btn-home {
+        font-size: 1em;
+        padding: 12px;
+        font-weight: 700; /* Maintain Bold */
+    }
+}
+.seats-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.seat-badge {
+    background: #667eea;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+

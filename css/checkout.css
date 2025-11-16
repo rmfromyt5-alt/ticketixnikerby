@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Body text Regular */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+.checkout-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Section Headings use Bold */
+}
+.booking-summary {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.movie-poster-section {
+    text-align: center;
+}
+.movie-poster-section img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.movie-poster-section h3 {
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Card Titles use SemiBold */
+}
+.summary-details h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Section Headings use Bold */
+}
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.detail-row strong {
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* SemiBold for emphasis */
+}
+.seats-list {
+    margin: 10px 0;
+    color: #666;
+}
+.food-list {
+    margin: 10px 0;
+}
+.food-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: #666;
+}
+.food-items-row {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.food-items-table-wrapper {
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: auto;
+    text-align: center;
+    border-spacing: 20px 10px;
+}
+.food-items-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 10px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.food-items-table thead {
+    background: #667eea;
+    color: white;
+}
+.food-items-table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* SemiBold for table headers */
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.food-items-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+.food-items-table tbody tr:hover {
+    background: #f8f9fa;
+}
+.food-items-table tbody tr:last-child {
+    border-bottom: none;
+}
+.food-items-table td {
+    padding: 12px 15px;
+    color: #333;
+    font-size: 0.95em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Body text Regular */
+}
+.food-items-table td:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* SemiBold for emphasis */
+    color: #667eea;
+}
+.food-items-table td:last-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* SemiBold for emphasis */
+    color: #28a745;
+    text-align: right;
+}
+.price-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.price-row.total {
+    border-top: 2px solid #667eea;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold for emphasis */
+    color: #667eea;
+}
+.btn-proceed {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Buttons use Bold */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+.btn-proceed:hover {
+    transform: translateY(-2px);
+}
+.btn-back {
+    background: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Buttons use Bold */
+}
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Body text Regular */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .booking-summary {
+        grid-template-columns: 1fr;
+    }
+    
+    .food-items-table {
+        font-size: 0.85em;
+    }
+    
+    .food-items-table th,
+    .food-items-table td {
+        padding: 8px 10px;
+    }
+    
+    .food-items-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        font-weight: 700; /* Maintain Bold */
+    }
+    
+    .summary-details h2 {
+        font-size: 1.3em;
+        font-weight: 700; /* Maintain Bold */
+    }
+    
+    .btn-proceed {
+        font-size: 1em;
+        padding: 12px;
+        font-weight: 700; /* Maintain Bold */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .checkout-container {
+        padding: 20px 15px;
+    }
+    
+    h1 {
+        font-size: 1.3em;
+        font-weight: 700; /* Maintain Bold */
+    }
+    
+    .summary-details h2 {
+        font-size: 1.1em;
+        font-weight: 700; /* Maintain Bold */
+    }
+    
+    .food-items-table {
+        font-size: 0.75em;
+    }
+    
+    .food-items-table th,
+    .food-items-table td {
+        padding: 6px 8px;
+    }
+    
+    .btn-proceed {
+        font-size: 0.95em;
+        padding: 12px;
+        font-weight: 700; /* Maintain Bold */
+    }
+}

@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Body text Regular */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+.payment-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Section Headings use Bold */
+}
+.total-amount {
+    text-align: center;
+    font-size: 2em;
+    color: #667eea;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold for emphasis */
+    margin-bottom: 30px;
+}
+.payment-methods {
+    margin: 30px 0;
+}
+.payment-option {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.payment-option:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+.payment-option.selected {
+    border-color: #667eea;
+    background: #f0f4ff;
+}
+.payment-option input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+}
+.payment-option label {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* SemiBold for labels */
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+.payment-icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+.sub-options {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+.sub-option {
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #f9f9f9;
+}
+.sub-option:hover {
+    border-color: #667eea;
+    background: #f0f4ff;
+}
+.sub-option input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.1);
+}
+.sub-option label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Medium for sub-options */
+    color: #333;
+    margin: 0;
+}
+.sub-option-icon {
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+.reference-wrapper {
+    margin-top: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+}
+.reference-wrapper.active {
+    display: flex;
+}
+.reference-label {
+    font-size: 0.85rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* SemiBold */
+    color: #495057;
+}
+.reference-input {
+    margin-top: 0;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.reference-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+.reference-hint {
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300; /* Captions use Light */
+    color: #6c757d;
+}
+.btn-pay {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Buttons use Bold */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+.btn-pay:hover {
+    transform: translateY(-2px);
+}
+.btn-pay:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+.btn-back {
+    background: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Buttons use Bold */
+}
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Body text Regular */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        font-weight: 700; /* Maintain Bold */
+    }
+    
+    .total-amount {
+        font-size: 1.5em;
+        font-weight: 700; /* Maintain Bold */
+    }
+    
+    .payment-option {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .payment-container {
+        padding: 20px 15px;
+    }
+    
+    h1 {
+        font-size: 1.3em;
+        font-weight: 700; /* Maintain Bold */
+    }
+    
+    .total-amount {
+        font-size: 1.3em;
+        font-weight: 700; /* Maintain Bold */
+    }
+    
+    .btn-pay {
+        font-size: 1em;
+        padding: 12px;
+        font-weight: 700; /* Maintain Bold */
+    }
+}
+

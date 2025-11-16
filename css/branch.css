@@ -1,0 +1,256 @@
+/* === GLOBAL STYLES === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* Body text Regular */
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #0b1a3a 0%, #102c56 100%);
+  color: white;
+}
+
+/* === HEADER (NEW DESIGN) === */
+header {
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo img.ticketix-logo {
+  width: 45px;
+  height: auto;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; /* Medium for navigation */
+  font-size: 15px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #00aaff;
+}
+
+.nav-search-form {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #0077ff;
+  border-radius: 30px;
+  padding: 4px 10px;
+}
+
+.nav-search-label {
+  margin-right: 8px;
+  font-size: 13px;
+  color: #ddd;
+}
+
+.nav-search-input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  width: 140px;
+}
+
+.nav-search-btn {
+  background: transparent;
+  border: none;
+  color: #00aaff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ticket-btn {
+  background-color: #00aaff;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Buttons use Bold */
+  transition: 0.3s ease;
+}
+
+.ticket-btn:hover {
+  background-color: #0086ff;
+}
+
+.user-profile .profile-circle {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #00aaff, #0044ff);
+  border-radius: 50%;
+}
+
+/* === CINEMA LIST SECTION === */
+main {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Section Headings use Bold */
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.cinema-list {
+  border-top: 3px solid rgba(255, 255, 255, 0.25);
+}
+
+.cinema-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.cinema-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 4px;
+  border: 1px solid #222f4c;
+}
+
+.cinema-info {
+  flex: 1;
+}
+
+.cinema-info h2 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600; /* Card Titles use SemiBold */
+}
+
+.cinema-info p {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #b0b9d7;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* Body text Regular */
+}
+
+.cinema-info a {
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold for links */
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+.cinema-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+  
+  nav a {
+    font-size: 13px;
+    margin: 0 8px;
+  }
+  
+  h1 {
+    font-size: 22px;
+    font-weight: 700; /* Maintain Bold */
+  }
+  
+  .cinema-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .cinema-item img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .cinema-info h2 {
+    font-size: 16px;
+    font-weight: 600; /* Maintain SemiBold */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 8px 15px;
+    flex-wrap: wrap;
+  }
+  
+  h1 {
+    font-size: 20px;
+    font-weight: 700; /* Maintain Bold */
+  }
+  
+  .cinema-info h2 {
+    font-size: 14px;
+    font-weight: 600; /* Maintain SemiBold */
+  }
+  
+  .cinema-info p {
+    font-size: 12px;
+  }
+}
+
+/*BACK BUTTON */
+.back-btn {
+    background: transparent;
+    border: 2px solid #00BFFF;
+    color: #00BFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Buttons use Bold */
+    border-radius: 30px;
+    padding: 8px 18px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.back-btn:hover {
+    background: #00BFFF;
+    color: #fff;
+    transform: translateY(-2px);
+}
